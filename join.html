@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta
+      name="description"
+      content="Petinder es una organizaicón que fomenta la adopción de perros y gatos"
+    >
+    <link rel="stylesheet" href="css/styles.css" >
+    <title>Hazte socio</title>
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <a class="link-logo" href="index.html">
+          <img class="logo" src="images/logo.svg" alt="Logo Petinder" >
+        </a>
+        <ul class="menu-links">
+          <li><a href="about.html">Sobre petinder</a></li>
+          <li><a href="tshirt.html">Camiseta</a></li>
+          <li class="link-active"><a href="">Hazte socio</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div id="confirmacion-formulario" hidden>
+          <img src="images/logo.svg" alt="" width="200" >
+          <h3>¡Datos enviados correctamente!</h3>
+          <p>
+            Gracias por formar parte de Petinder y ayudar a nuestro perretes y
+            gatetes
+          </p>
+        </div>
+        <h2>Házte socio</h2>
+        <p>
+          Colabora con Petinder haciendote socio opr solo 15 euros mensuales.
+          Con muy poco puedes ayudar mucho a nuestros amigos peludos. Además
+          puedes comprar nuestra exclusiva camiseta por solo 10 euros que se
+          añadirán al primer pago. Rellena el siguiente formulario para unirte a
+          nosotros.
+        </p>
+        <form action="#" method="post" id="form-socio">
+          <fieldset class="fieldset-flex" aria-label="Datos personales">
+            <legend class="form-legend">Datos Personales</legend>
+            <label for="nombre"
+              >Nombre <span class="formulario--obligatorio">*</span></label
+            >
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              value=""
+              placeholder="Nombre"
+              required
+              minlength="4"
+              maxlength="20"
+              pattern="^[^\s][A-Za-z\s]*$"
+              aria-required="true"
+            >
+            <label for="apellido"
+              >Apellidos <span class="formulario--obligatorio">*</span></label
+            >
+            <input
+              type="text"
+              id="apellido"
+              name="apellido"
+              value=""
+              placeholder="Apellidos"
+              required
+              minlength="3"
+              maxlength="30"
+              pattern="^[^\s][A-Za-z\s]*$"
+              aria-required="true"
+            >
+            <label for="email"
+              >Correo electrónico
+              <span class="formulario--obligatorio">*</span></label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value=""
+              placeholder="Correo electrónico"
+              pattern="^[a-zA-Z0-9]+@[a-zA-Z.-]+\.(com|es|org)$"
+              aria-describedby="email-info"
+              aria-required="true"
+              required
+            >
+            <div id="email-info" hidden>
+              Introduce tu email el formato debe ser cualquier numero, dígito o
+              símbolo sequido de @ seguido de cualquier número, dígito o símbolo
+              y terminado en .com o .com o .org
+            </div>
+            <label for="dni"
+              >Dni <span class="formulario--obligatorio">*</span></label
+            >
+            <input
+              type="text"
+              id="dni"
+              name="dni"
+              value=""
+              placeholder="DNI"
+              pattern="^\d{8}[a-zA-Z]$|^[a-zA-Z]{1}\d{7}[a-zA-Z]{1}$"
+              minlength="8"
+              aria-required="true"
+              aria-describedby="dni-info"
+              required
+            >
+            <div id="dni-info" hidden>
+              Ingresa un DNI válido puede ser ocho dígitos seguidos de una letra
+              o si tiene un NIE una letra seguida de siete dígitos seguida de
+              una letra
+            </div>
+            <label for="nacimiento"
+              >Fecha de nacimiento
+              <span class="formulario--obligatorio">*</span></label
+            >
+            <input
+              type="date"
+              id="nacimiento"
+              name="nacimiento"
+              value=""
+              required
+              aria-required="true"
+            >
+          </fieldset>
+          <fieldset class="fieldset-flex" aria-label="Direccion personal">
+            <legend>Dirección</legend>
+            <label for="direccion"
+              >Calle y número <span class="formulario--obligatorio">*</span>
+            </label>
+            <input
+              type="text"
+              id="direccion"
+              name="direccion"
+              value=""
+              placeholder="Calle y número"
+              required
+              minlength="5"
+              maxlength="50"
+              pattern="^[^\s][A-Za-z0-9ñÑ\s]*$"
+              aria-required="true"
+            >
+            <label for="ciudad"
+              >Ciudad<span class="formulario--obligatorio">*</span>
+            </label>
+            <input
+              type="text"
+              id="ciudad"
+              name="ciudad"
+              value=""
+              placeholder="Ciudad"
+              required
+              minlength="3"
+              maxlength="20"
+              pattern="^[^\s][A-Za-zñÑ\s]*$"
+              aria-required="true"
+            >
+            <label for="provincia"
+              >Provincia <span class="formulario--obligatorio">*</span>
+            </label>
+            <input
+              type="text"
+              id="provincia"
+              name="provincia"
+              value=""
+              placeholder="Provincia"
+              required
+              minlength="3"
+              maxlength="20"
+              pattern="^[^\s][A-Za-zñÑ\s]*$"
+              aria-required="true"
+            >
+            <label for="cod-postal"
+              >Código Postal <span class="formulario--obligatorio">*</span>
+            </label>
+            <input
+              type="text"
+              id="cod-postal"
+              name="cod-postal"
+              value=""
+              placeholder="Código postal"
+              required
+              minlength="5"
+              maxlength="5"
+              pattern="^[^\s][0-9]*$"
+              aria-required="true"
+            >
+            <label for="pais"
+              >País <span class="formulario--obligatorio">*</span>
+            </label>
+            <select
+              id="pais"
+              name="pais"
+              required
+              aria-required="true"
+              aria-label="selecciona tu páis del desplegable"
+            >
+              <option value="" selected>Seleccionar</option>
+              <option value="andorra">Andorra</option>
+              <option value="francia">Francia</option>
+              <option value="espana">España</option>
+              <option value="otro">Otro</option>
+            </select>
+          </fieldset>
+
+          <fieldset id="fieldset-pago" aria-label="pago y pedido camiseta">
+            <legend>Datos de pago y camiseta</legend>
+            <h4><strong>Método de pago</strong></h4>
+
+            <div class="estilos-button">
+              <div class="button-item">
+                <input type="radio" name="pago" id="transferencia" checked >
+                <label for="transferencia">Transferencia</label>
+              </div>
+              <div class="button-item">
+                <input type="radio" name="pago" id="credito"  >
+                <label for="credito">Tarjeta de crédito</label>
+              </div>
+              <div class="button-item">
+                <input type="radio" name="pago" id="paypal" >
+                <label for="paypal">Paypal</label>
+              </div>
+            </div>
+            <h4>Camiseta</h4>
+            <p id="camiseta-descripcion">
+              Si quieres que te enviemos la camiseta Petinder por 10€ más,
+              selecciona la talla a continuación
+            </p>
+            <label
+              for="camiseta"
+              id="label-talla"
+              aria-describedby=" camiseta-descripcion"
+              ><a href="tshirt.html" target="_blank" aria-label="Se abre ventana nueva con la página para consultar la tabla de tallas">Talla de camiseta</a></label
+            >
+            <select name="camiseta" id="camiseta">
+              <option value="sin-camiseta" selected>No quiero camiseta</option>
+              <optgroup label="Mujeres">
+                <option value="sñora-cmta-s">S</option>
+                <option value="sñora-cmta-m">M</option>
+                <option value="sñora-cmta-l">L</option>
+                <option value="sñora-cmta-xl">XL</option>
+              </optgroup>
+              <optgroup label="Hombres">
+                <option value="cbro-cmta-s">S</option>
+                <option value="cbro-cmta-m">M</option>
+                <option value="cbro-cmta-l">L</option>
+                <option value="cbro-cmta-xl">XL</option>
+                <option value="cbro-cmta-xxl">XXL</option>
+                <option value="cbro-cmta-xxxl">XXXL</option>
+              </optgroup>
+            </select>
+          </fieldset>
+          <div class="footer-formulario">
+            <p id="alert-obligatorios">
+              <span class="formulario--obligatorio"
+                ><strong
+                  >* Todos los campos marcados son obligatorios</strong
+                ></span
+              >
+            </p>
+            <input
+              type="checkbox"
+              id="politica"
+              name="politica"
+              value="true"
+              required
+              aria-required="true"
+            >
+            <label for="politica"
+              >He leído y acepto la política de privacidad y las condiciones de
+              uso</label
+            >
+            <br >
+            <input
+              type="submit"
+              name="enviar"
+              value="Enviar"
+              id="form-enviar"
+            >
+            <input type="reset" name="Limpiar" id="form-clear" >
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <span>2024 Petinder - Ohiane Irure Solchaga</span>
+        <ul class="legal-links">
+          <li><a href="">Terminos y condiciones</a></li>
+          <li><a href="">Política y privacidad</a></li>
+          <li><a href="">Cookies</a></li>
+          <li><a href="">FAQ</a></li>
+        </ul>
+      </div>
+    </footer>
+
+  <script>
+    document
+      .querySelector("#form-socio")
+      .addEventListener("submit", function (e) {
+        e.preventDefault(); // Evita el envío tradicional del formulario
+        this.reset(); //limpieza formulario
+        let div = document.querySelector("#confirmacion-formulario");
+        div.removeAttribute("hidden");
+        div.classList.add("confirmacion");
+        setTimeout(() => {
+          div.classList.remove("confirmacion");
+          div.setAttribute("hidden", "");
+        }, 5000);
+      });
+  </script>
+    </body>
+</html>

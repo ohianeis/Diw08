@@ -1,0 +1,475 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap");
+
+/*Reglas generales*/
+/*Definición de variables*/
+:root {
+  --text-color: rgb(23, 23, 23);
+  --primary-color: rgb(91, 73, 254);
+  --secundary-color: rgb(125, 232, 140);
+  --primary-ligth-color: rgb(207, 243, 125);
+}
+
+/*Reset margins and paddings*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-color);
+  background-color: #f9f9f9;
+}
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  background-color: transparent;
+}
+header .menu-links a:hover {
+  color: var(--primary-color);
+}
+
+p {
+  margin-bottom: 10px;
+}
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+.title {
+  font-family: Poppins, sans-serif;
+}
+.title {
+  font-weight: 800;
+  font-size: 1.9rem;
+  margin-bottom: 0.75rem;
+}
+.img-fluid {
+  max-width: 100%;
+}
+
+header .menu-links .link-active a{
+    color: var(--primary-color);
+    
+}
+/*Adaptación elementos dentro container -->responsive*/
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+/*bloques generales plantilla*/
+
+header{
+    min-height: 115px;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(13,10,44,0.04);
+}
+header .link-logo{
+    display: inline-block;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+header .logo{
+    height: 50px;
+    width: auto;
+    margin-right: 5px;
+}
+header .menu-links li{
+    margin-right: 15px;
+    font-weight: 600;
+    display: inline-block;
+}
+header .menu-links a{
+    color: black;
+}
+/*revisa*/
+header .menu-links li.active a{
+    font-weight: 700;
+}
+
+main{
+    padding-top: 40px;
+    padding-bottom: 220px;
+}
+main a{
+    border-bottom: 1px dotted var(--primary-color);
+}
+main a:hover{
+    border-color: var(--secundary-color);
+}
+
+footer{
+    background: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+    margin-top: auto;
+    font-size: 0.9rem;
+    font-weight: 500;
+    height: 90px;
+}
+footer a{
+    color: white;
+}
+footer .legal-links{
+    margin-top: 5px;
+}
+footer .legal-links li{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/*home*/
+
+.page-home header{
+    background: transparent;
+    box-shadow: none;
+    position: fixed;
+    width: 100%;
+}
+.page-home{
+    background: linear-gradient(75deg, var(--primary-ligth-color) 0% , var(--secundary-color));
+}
+
+.page-home main{
+    padding: 0;
+}
+.page-home .title{
+    font-size: 3.4rem;
+    margin-bottom: 15px;
+    line-height: 4rem;
+}
+.page-home .title span{
+    color: white;
+}
+
+.page-home .featured{
+    max-width: 470px;
+}
+
+.page-home main .container{
+    min-height: calc(100vh - 90px);
+    background: url(../images/hero_image_bg.png) 100% no-repeat;
+    background-size: 700px auto;
+    padding-top: 150px;
+    padding-bottom: 120px;
+}
+.page-home main .featured .featured-text{
+    margin-bottom: 25px;
+
+}
+.search-bar .search-control{
+    padding-left: 45px;
+   
+    height: 58px;
+    background: #fff url(../images/icon_search.svg)5px 50% no-repeat;
+}
+.form-control{
+    display: block;
+    width:100%;
+    font-size: 1rem;
+}
+
+/*estilos about*/
+figcaption{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.container-imagen{
+    display: flex;
+    justify-content: center;
+}
+h2{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/*estilos camisetas*/
+.page-tshirt main{
+
+    min-height:calc(100vh -205px); ;
+}
+.table{
+    width: 100%;
+    margin: 30px;
+    border-collapse: collapse;
+}
+.table, .table th, .table td{
+    border: 1px solid black;
+}
+.table th{
+    background: var(--primary-ligth-color);
+    padding: 5px;
+}
+.table thead th{
+    text-align: center;
+   
+}
+.table tbody th{
+    text-align: left;
+}
+.table tbody td{
+    text-align: center;
+}
+.table thead th:first-child{
+     background: var(--secundary-color);
+}
+.table td{
+    background: white;
+    padding: 5px 10px;
+}
+.table tr:nth-child(odd) td{
+    border-bottom: 1px solid var(--secundary-color);
+}
+caption{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+/*estilos formulario*/
+
+#form-socio input[type=text],input[type=email],input[type=date],input[type=number],select{
+    display: block;
+    width: 80%;
+    height: 2rem;
+}
+
+
+#form-socio legend{
+   color: white;
+   background-color: var(--primary-color);
+   margin-left: 20px;
+   padding-left: 10px;
+   padding-right: 10px;
+   height: 30px;
+   line-height: 2;
+   
+
+}
+/*animacion de los legend, aparecen gradualmente al cargar la página*/
+@keyframes fadeInAndGrow {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  legend {
+    animation: fadeInAndGrow 3s ease forwards;
+   
+}
+.formulario--obligatorio{
+    color: red;
+   
+}
+/*no me funcona bien borde focus el color !revisar*/
+ input:focus{
+    background-color: var(--primary-ligth-color);
+    transition: background-color 0.8s ease;
+    border: none;
+    border: 2px solid var(--secundary-color);
+    transform: scale(1.1);
+   
+}
+
+input:hover ,  select:focus,select:hover{
+    border: 2px solid var(--secundary-color);
+    transform: scale(1.1);
+ 
+}
+.fieldset-flex label:hover{
+    transform: scale(1.5)  ;
+   
+}
+
+
+
+/*datos personale y dirección*/
+#form-socio .fieldset-flex{
+    margin-top: 20px;
+    width: 40vw;
+   border: 1px solid var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 33rem;
+  align-items: center;
+  line-height: 50px;
+
+}
+#form-socio .fieldset-flex label{
+    align-self:flex-start;
+    margin-left: calc(50vw/13);
+   
+}
+
+
+/*datos pago y camiseta*/
+#form-socio #fieldset-pago{
+    margin-top: 20px;
+    border: 1px solid var(--primary-color);
+    width: 40vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+  
+    
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    
+}
+#form-socio #fieldset-pago p,h4{
+    width: 100%;
+   
+}
+#form-socio #fieldset-pago #label-talla{
+    width: 100%;
+}
+#fieldset-pago h4,#fieldset-pago input,#fieldset-pago p,#fieldset-pago select,#label-talla{
+     margin-left: calc(50vw/10);
+}
+#fieldset-pago h4{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/*botones radio tengan bien margenes al cambiar tamaños*/
+.estilos-button{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+ /*footer formulario*/
+
+#alert-obligatorios{
+    font-size: 12px;
+}
+#form-enviar, #form-clear{
+    background-color: var(--primary-color);
+    color: white;
+    width: auto;
+    height: 30px;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+/*hover en botones con animación en los cambios*/
+#form-enviar:hover, #form-clear:hover{
+    transform: scale(1.8);
+    background-color: white;
+    transition: background-color 1.5s ease;
+    color: var(--primary-color);
+    text-transform: uppercase;
+   
+}
+/*clase que se añade a div oculto cuando el formulario se envía*/
+.confirmacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    align-items: center;
+    background-color: var(--secundary-color);
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+    position: fixed;
+    top:40%;
+    left: 10%;
+    width: 80%;
+    
+}
+
+@media (min-width: 200px) and (max-width:600px) {
+    #form-socio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        align-items: center;
+    }
+    .footer-formulario{
+       margin-left: calc(100vw/10);
+    }
+    #form-socio #fieldset-pago{
+   
+        width: 80vw;
+   
+        
+    }
+    #form-socio .fieldset-flex{
+    
+        width: 80vw;
+       
+    
+    }
+    #form-socio .fieldset-flex label{
+     
+        margin-left: calc(50vw/6);
+    }
+  }
+  @media (min-width: 600px) and (max-width:800px) {
+   
+    .footer-formulario{
+       margin-left: calc(100vw/10);
+    }
+    #form-socio #fieldset-pago{
+   
+        width: 70vw;
+   
+        
+    }
+    #form-socio .fieldset-flex{
+    
+        width: 70vw;
+       
+    
+    }
+    #form-socio .fieldset-flex label{
+     
+        margin-left: calc(50vw/7);
+    }
+  }
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1300px;
+  }
+  
+
+}
